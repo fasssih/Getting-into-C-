@@ -136,4 +136,10 @@ int main()
     string array[] = {"Helo1","Helo2","Helo3","Helo4","Helo5"};
     string (*pbhai)[5] = &array;
     cout<<'\n'<<*pbhai;
+
+    // a null pointer (nullptr) is a  pointer that is intentionally set to point to nothing 
+    int *ptr = nullptr;
+    ptr = &y;
+    cout<<"\nNUll pointer : "<<ptr;
+
 }
