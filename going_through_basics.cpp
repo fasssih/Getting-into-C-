@@ -156,31 +156,5 @@ int main()
     delete []pads;
     cout<<"\nhere you go: "<<pads[1];
     */
-    // Iteration : ik iteration it can be done using loops
-
-    /*Recursion in C++ is a way of solving a problem by having a function 
-    call itself with a smaller/simpler version of the same problem, until
-    it reaches a stopping condition (base case).*/
-
-    walk(5);
-    walked(5);
-    cout<<fact(5);
-}
-void walk(int steps){
-    for(int i = 0;i < steps;i++){
-        cout<<"you took a step!\n";
-    }
-}
-void walked(int steps){
-    if(steps>0){
-        cout<<"You took a damn step ! \n";
-        walked(steps - 1);
-    }
-}
-int fact(int num){
-    if(num>1){
-        return num*fact(num - 1);
-    }else{
-        return 1;
-    }
+    
 }
