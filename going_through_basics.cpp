@@ -122,29 +122,35 @@ int main()
 
     int q = 7;
     int *p = &q;
-    cout<<p;
+    cout<<"address of p" <<p;
 
     int o = 98;
     int *po = &o;
-    *po = 100;
-    cout<<o;
+    //*po = 100;
+    cout<<"\no is 98 "<<o;
 
     int y = 8;
     int*pq = &y;
-    cout<<'\n'<<*pq;
+    cout<<"\n pq is 8 "<<*pq;
 
     string array[] = {"Helo1","Helo2","Helo3","Helo4","Helo5"};
     string (*pbhai)[5] = &array;
-    cout<<'\n'<<*pbhai;
+    cout<<"\nshall print hello 2"<<array[1];
 
     // a null pointer (nullptr) is a  pointer that is intentionally set to point to nothing 
     int *ptr = nullptr;
     ptr = &y;
+    delete ptr;
     cout<<"\nNUll pointer : "<<ptr;
 
     // New operator in C++ is used to create memory dynamically and returns the address of that memory which can be stored in a pointer
-    int *pa = new int;
-    *pa = 50;
-    cout<<'\n'<<p;
+    int *pads = new int[2];
+    pads[0] = 34;
+    pads[1] = 4;
+    pads[2] = 3;
+
+    //delete opertor to delete memory on a given interval
+    delete []pads;
+    cout<<"\nhere you go: "<<pads[1];
 
 }
