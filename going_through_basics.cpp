@@ -142,4 +142,9 @@ int main()
     ptr = &y;
     cout<<"\nNUll pointer : "<<ptr;
 
+    // New operator in C++ is used to create memory dynamically and returns the address of that memory which can be stored in a pointer
+    int *pa = new int;
+    *pa = 50;
+    cout<<'\n'<<p;
+
 }
