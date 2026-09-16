@@ -11,6 +11,9 @@ typedef std::string ors;
 using u = int;
 // using is a keyword used to create another name for an existing data type
 */
+void walk(int steps);
+void walked(int steps);
+int fact(int num);
 int main()
 {
     /*
@@ -111,7 +114,7 @@ int main()
     // & is used to access memory addresss called address of operator
 
     std::string bhai = "Bhaiyyah vastaganahuiyya! ";
-    */
+    
     
 
     // * asterisk is used for multiplication, pointer variable, pointer modification and as a dereference operator
@@ -152,5 +155,32 @@ int main()
     //delete opertor to delete memory on a given interval
     delete []pads;
     cout<<"\nhere you go: "<<pads[1];
+    */
+    // Iteration : ik iteration it can be done using loops
 
+    /*Recursion in C++ is a way of solving a problem by having a function 
+    call itself with a smaller/simpler version of the same problem, until
+    it reaches a stopping condition (base case).*/
+
+    walk(5);
+    walked(5);
+    cout<<fact(5);
+}
+void walk(int steps){
+    for(int i = 0;i < steps;i++){
+        cout<<"you took a step!\n";
+    }
+}
+void walked(int steps){
+    if(steps>0){
+        cout<<"You took a damn step ! \n";
+        walked(steps - 1);
+    }
+}
+int fact(int num){
+    if(num>1){
+        return num*fact(num - 1);
+    }else{
+        return 1;
+    }
 }
