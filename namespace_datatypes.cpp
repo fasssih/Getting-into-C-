@@ -11,6 +11,14 @@ namespace second{
 namespace third{
     int x = 3;
 }
+struct customers
+{
+    string name;
+    float change;
+    int payment; 
+    char item;
+};
+
 
 int main()
 {
@@ -46,5 +54,13 @@ int main()
     const int radius = 3;
     int circum = 2 * pi * radius;
     
+    // a struct operator in C++ is used to group different types of data under one name
+    customers customer1;
+    customer1.name = "sasha";
+    customer1.payment = 120;
+    customer1.change = 21.23;
+    customer1.item  = 'z';
+    cout<<"\nOur most strange customer "<<customer1.name<<" came and paid $"<<customer1.payment<<" for the item no. ";
+    cout<<customer1.item<<" And got a change of $"<<customer1.change;
     return 0;
 }
