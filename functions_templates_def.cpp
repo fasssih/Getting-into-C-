@@ -20,7 +20,9 @@ void printinfo(const int age2, const string name);
 void walked(int steps);
 void walk(int steps);
 int fact(int num);
-template <typename T>
+template <typename T> 
+// Template can be used to generate as many 
+//overloaded functions as needed of different datatypes 
 T maximum(T x, T y)
 {
     return (x > y) ? x : y;
