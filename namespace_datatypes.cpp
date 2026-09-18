@@ -2,6 +2,10 @@
 #include <vector>
 
 using namespace std;
+// Enum (enumeration) is a way to create your own data type that contains a fixed set of named integer values
+enum day {monday = 0, tuesday = 1, wednesday = 2,thursday = 3, friday = 4, saturday = 5,sunday = 6};
+enum flavour{vanilla, chocolate, pistachio, almond, strawberry}; // If you don't numerate the values enums implicitly numerate them from zero
+
 namespace first{
     int x = 1;
 }
@@ -63,5 +67,35 @@ int main()
     customer1.item  = 'z';
     cout<<"\nOur most strange customer "<<customer1.name<<" came and paid $"<<customer1.payment<<" for the item no. ";
     cout<<customer1.item<<" And got a change of $"<<customer1.change;
+
+    //Using enum values in a switch statement because we can't use string values as casees in a switch statement
+    day today = sunday;
+    switch (today)
+    {
+    case sunday:
+        cout<<"\nIts Sunday!";
+        break;
+    case monday:
+        cout<<"\nIts monday!";
+        break;
+    case tuesday:
+        cout<<"\nIts tuesday!";
+        break;
+    case wednesday:
+        cout<<"\nIts wednesday!";
+        break;
+    case thursday:
+        cout<<"\nIts thursday!";
+        break;
+    case friday:
+        cout<<"\nIts friday!";
+        break;
+    case saturday:
+        cout<<"\nIts saturday!";
+        break;
+    default:
+        cout<<"New day";
+        break;
+    }
     return 0;
 }
