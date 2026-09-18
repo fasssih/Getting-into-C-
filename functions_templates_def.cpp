@@ -12,6 +12,40 @@ struct cars
     int year;
     char prefix;
 };
+//A class is a blueprint/template that tells what an object should have and what it can do
+// whereas an object is an intance of a class containing its own attributes and methods
+class human{
+    //declaring it public otherwise it would be considered private by default 
+    public:
+    string name;
+    int age;
+    double salary;
+    void cook(){
+        cout<<"\nHe can cook";
+    }
+    void eat(){
+        cout<<"\nhe can eat";
+    }
+    void clean(){
+        cout<<"\nHe can clean";
+    }
+};
+class vehicle{
+    public:
+    /*So here we created default attributes for an object so that if you don't 
+    enter any attribute manually and declare an object and print it's attributs 
+    the default ones would come out*/
+        string make = "Bayreche motoren verke";
+        string model = "M4";
+        int year = 2015;
+        
+        void acc(){
+            cout<<"\nYou stepped on the gas";
+        }
+        void brake(){
+            cout<<"\nYou stepped on the brake";
+        }
+};
 // function declarations
 void bakingpitza();
 void bakingpitza(std::string topping);
@@ -101,6 +135,29 @@ int main()
 
     printcar(car1);
     printcar(car2);
+
+    //Accessing and assigning values to different attributes of objects human1 and human2
+    human human1;
+    human1.name = "ricky";
+    human1.age = 23;
+    human1.salary = 123.23;
+
+    cout<<"\nHis names is "<<human1.name;
+    cout<<"\nHis age is "<<human1.age;
+    cout<<"\nHis salary is "<<human1.salary;
+    human1.eat();
+    human1.cook();
+    human1.clean();
+
+    vehicle gadi;
+    gadi.year = 1233;
+    gadi.make = "Mercedes";
+    gadi.model  = "AMG";
+
+    vehicle gadi2;
+    cout<<"\n"<<gadi.year<<" "<<gadi.model<<" "<<gadi.make;
+    cout<<"\n"<<gadi2.year<<" "<<gadi2.model<<" "<<gadi2.make;
+
 }
 
 //ALL FUNCTIONS
