@@ -55,6 +55,7 @@ int main()
     int circum = 2 * pi * radius;
     
     // a struct operator in C++ is used to group different types of data under one name
+    // members can be accessed by a dot (.) also known as class member access opertor
     customers customer1;
     customer1.name = "sasha";
     customer1.payment = 120;

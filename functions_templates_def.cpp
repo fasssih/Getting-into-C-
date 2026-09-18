@@ -3,11 +3,15 @@ using namespace std;
 
 //global variables
 int num = 3;
-
 namespace second{
     int num = 22;
 }
-
+struct cars
+{
+    string model;
+    int year;
+    char prefix;
+};
 // function declarations
 void bakingpitza();
 void bakingpitza(std::string topping);
@@ -19,6 +23,7 @@ string concatstring(string string1, string string2);
 void printinfo(const int age2, const string name);
 void walked(int steps);
 void walk(int steps);
+void printcar(cars &car); // By using the reference operator we can print addresses of more than one items
 int fact(int num);
 template <typename T> 
 // Template can be used to generate as many 
@@ -82,7 +87,20 @@ int main()
     cout<<'\n'<<"Here you go : "<<maximum(3.433,3.4439);
     cout<<'\n'<<"Here you go : "<<maximum('3','4');
     cout<<'\n'<<"Here you go : "<<maximum(3.433,3.4439);
+    
+    //passing struct values to a function 
+    cars car1;
+    car1.model = "BMW M4";
+    car1.prefix = 'M';
+    car1.year = 1992;
 
+    cars car2;
+    car2.model = "Mercedes benz";
+    car2.prefix = 'C';
+    car2.year = 2021;
+
+    printcar(car1);
+    printcar(car2);
 }
 
 //ALL FUNCTIONS
@@ -131,4 +149,8 @@ int fact(int num){
     }else{
         return 1;
     }
+}
+void printcar(cars &car){
+    cout<<'\n'<<&car;
+    cout<<"\n"<<car.model<<"\n"<<car.prefix<<"\n"<<car.year;
 }
