@@ -95,6 +95,22 @@ class room{
         return temp;
     }
 };
+class animal{
+    public:
+    bool alive = true;
+};
+class dog: public animal{
+    public:
+    void bark(){
+        cout<<"\nIt can bark probably";
+    }
+};
+class cat: public animal{
+    public:
+    void meow(){
+        cout<<"\nIt says meow boss";
+    }
+};
 // function declarations
 void bakingpitza();
 void bakingpitza(std::string topping);
@@ -216,10 +232,14 @@ int main()
     cout<<"\nHere is your second "<<pizza3.topping<<" and "<<pizza3.topping2<<" pizza";
     cout<<"\nHere is your first "<<pizza4.topping<<","<<pizza4.topping2<<" and "<<pizza4.topping3<<" pizza";
 
-
+    //using inherited class objects
     room r1(4);
     cout<<r1.givetemp();
+    dog doggi;
+    cat catto;
+    catto.meow();
 
+    doggi.alive();
 }
 
 //ALL FUNCTIONS
