@@ -74,9 +74,27 @@ class pizza{
         this->topping2 = topping2;
         this->topping3 = topping3;
         }
-// function declarations
-
 };
+class room{
+    //Abstraction using private and public keywords in a class
+    private:
+        int temp = 0;
+    public:
+        int gettemp(){
+            return temp;
+        }
+        void settemp(int temp){
+            if(temp <= 0){
+                this->temp = 0;
+            }else if(temp >=10){
+                this->temp = 10;
+            }else{
+                this->temp = temp;
+            }
+        }
+
+    };
+// function declarations
 void bakingpitza();
 void bakingpitza(std::string topping);
 void bakingpitza(std::string topping, std::string topping2);
@@ -197,9 +215,12 @@ int main()
     cout<<"\nHere is your second "<<pizza3.topping<<" and "<<pizza3.topping2<<" pizza";
     cout<<"\nHere is your first "<<pizza4.topping<<","<<pizza4.topping2<<" and "<<pizza4.topping3<<" pizza";
 
-    
+    //
+    room r1;
+    r1.settemp(-19);
 
 }
+
 
 //ALL FUNCTIONS
 void happy(string boi, int age){
