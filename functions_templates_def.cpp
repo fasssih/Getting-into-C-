@@ -99,6 +99,30 @@ class animal{
     public:
     bool alive = true;
 };
+class shape{
+    public:
+    double area;
+    double volume;
+};
+//inheritance
+class cube:public shape{
+    public:
+    double side;
+    cube(double side){
+        this->side = side;
+        this->area = 6*(side*side);
+        this->volume = side*side*side;
+    }
+};
+class sphere:public shape{
+    public:
+    double radius;
+    sphere(double side){
+        this->radius = radius;
+        this->area = 4*3.14159*(radius*radius);
+        this->volume = (4/3.0)*3.14159*(radius*radius*radius);
+    }
+};
 class dog: public animal{
     public:
     void bark(){
@@ -238,8 +262,10 @@ int main()
     dog doggi;
     cat catto;
     catto.meow();
+    doggi.bark();
 
-    doggi.alive();
+    cube cabe(34);
+    cout<<cube2.area;
 }
 
 //ALL FUNCTIONS
