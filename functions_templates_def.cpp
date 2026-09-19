@@ -38,15 +38,45 @@ class vehicle{
         string make = "Bayreche motoren verke";
         string model = "M4";
         int year = 2015;
-        
+        //constructor in an special function in a class that automatically runs when an object is created
+        vehicle(string make, string model, int year){
+            //This operator is used to access current objects members
+            this->make = make;
+            this->model = model;
+            this->year = year;
+        }
         void acc(){
-            cout<<"\nYou stepped on the gas";
+            cout<<"\nYou stepped on the gas of"<<model;
         }
         void brake(){
             cout<<"\nYou stepped on the brake";
         }
 };
+class pizza{
+    public:
+        string topping;
+        string topping2;
+        string topping3;
+        
+        //creating overloaded constructors
+        pizza(){
+            //this constructor function is empty so we can declare an object without assigning values to it
+        }
+        pizza(string topping){
+            this->topping  = topping;
+        }
+        pizza(string topping,string topping2){
+        this->topping  = topping;
+        this->topping2 = topping2;
+        }
+        pizza(string topping, string topping2, string topping3){
+        this->topping  = topping;
+        this->topping2 = topping2;
+        this->topping3 = topping3;
+        }
 // function declarations
+
+};
 void bakingpitza();
 void bakingpitza(std::string topping);
 void bakingpitza(std::string topping, std::string topping2);
@@ -149,14 +179,25 @@ int main()
     human1.cook();
     human1.clean();
 
-    vehicle gadi;
-    gadi.year = 1233;
-    gadi.make = "Mercedes";
-    gadi.model  = "AMG";
-
-    vehicle gadi2;
+    //Accessing and assigning values to different attributes of objects of vehicle class
+    vehicle gadi("BMW","M4",8280);
+    vehicle gadi2("BMW","M4",9289);
     cout<<"\n"<<gadi.year<<" "<<gadi.model<<" "<<gadi.make;
     cout<<"\n"<<gadi2.year<<" "<<gadi2.model<<" "<<gadi2.make;
+    gadi.acc();
+    gadi2.brake();
+
+    //Assigning values to the objects of a class with overloaded constructors
+    pizza pizza1;
+    pizza pizza2("Pepperoni");
+    pizza pizza3("Pepperoni","chamba khoni");
+    pizza pizza4("Pepperoni","chamba khoni","Samba khoni");
+
+    cout<<"\nHere is your first "<<pizza2.topping<<" pizza";
+    cout<<"\nHere is your second "<<pizza3.topping<<" and "<<pizza3.topping2<<" pizza";
+    cout<<"\nHere is your first "<<pizza4.topping<<","<<pizza4.topping2<<" and "<<pizza4.topping3<<" pizza";
+
+    
 
 }
 
