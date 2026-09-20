@@ -117,7 +117,7 @@ class cube:public shape{
 class sphere:public shape{
     public:
     double radius;
-    sphere(double side){
+    sphere(double radius){
         this->radius = radius;
         this->area = 4*3.14159*(radius*radius);
         this->volume = (4/3.0)*3.14159*(radius*radius*radius);
@@ -264,8 +264,9 @@ int main()
     catto.meow();
     doggi.bark();
 
-    cube cabe(34);
-    cout<<cube2.area;
+    cube cube1;
+
+
 }
 
 //ALL FUNCTIONS
