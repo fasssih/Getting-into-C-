@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ctime>
 using namespace std;
+
 /*Commits on Aug 10, 2026*/
 using ors = int;
 namespace first{
