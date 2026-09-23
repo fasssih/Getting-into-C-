@@ -14,7 +14,7 @@ int main()
 {
     //Commits on Aug 9, 2026
     ors_t chalo;
-    cout<<"Enter your first phrase!";
+    cout<<"Enter your first word!";
     cin>>chalo;
     cout<<"Here is your first word to start with "<<chalo;
 
@@ -24,15 +24,16 @@ int main()
     cout<<"\n"<<second::x;
     cout<<"\n"<<first::x;
     
-    //Commits on Aug 11, 2026
+    //Commits on Aug 11,12 2026
     int y;
     cout<<"\nEnter your marks obtained: ";
     cin>>y;
     string name;
     cout<<"\nEnter your full name: ";
-    getline(cin,name);
-    int per = (y/510) *100;
+    getline(cin>>ws,name);
+    double per = (y/510) *100;
     cout<<'\n'<<name<<" Got "<<per<<"% in his matriculatoin";
 
-
-}
+    //Commits on Aug 13, 2026
+    
+}  
